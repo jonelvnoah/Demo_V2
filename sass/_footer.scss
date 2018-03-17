@@ -1,0 +1,16 @@
+footer{
+  margin-top: 10px;
+  padding: 50px 0;
+  font-family: 'pingFang', sans-serif;
+  font-size: 10px;
+  font-weight: bold;
+  opacity: .8;
+}
+
+footer.bottom{
+    background-color: $gray_f5;
+    font-family:'montserrat', sans-serif;
+    font-size: 8px!important;
+    opacity: .4;
+    text-transform: uppercase;
+}

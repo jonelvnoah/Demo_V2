@@ -1,0 +1,131 @@
+.contact-content{
+  position: fixed;
+  width: 100%;
+  height: 1px;
+  font-family: 'playfair', Serif;
+  top: 0;
+  overflow: hidden;
+  background-color: $grizzlyBlue;
+  z-index: 9999;
+  display: block;
+  .contact-title{
+    position: relative;
+    text-align: center;
+    top: 23px;
+    font-style: italic;
+    font-size: 28px;
+    line-height: 36px;
+    color: $white;
+  }
+  .btn-close{
+    position: absolute;
+    top: 30px;
+    right: 145px;
+    height: 21px;
+    width: 21px;
+    cursor: pointer;
+    &:before, &:after{
+      position: absolute;
+      left: 11px;
+      content: "";
+      height: 21px;
+      width: 3px;
+      background-color: $black;
+    }
+    &:before{
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+    }
+    &:after{
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+    }
+  }
+  .contact-icons{
+    position: relative;
+    margin: 100px auto 0 auto;
+    >div{
+      display: inline-block;
+      width: 210px;
+      height: 210px;
+      text-align: center;
+      cursor: pointer;
+      margin: auto 30px;
+      &:hover{
+        .icon{
+          background-color: $white_de;
+        }
+      }
+    }
+    .icon{
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: cover;
+      margin: 0 auto;
+      height: 113px;
+      width: 113px;
+      border-radius: 50%;
+      border: 5px solid rgba(0, 0, 0, 0);
+    }
+    .btn-wechat{
+      .qrcode{
+        position: absolute;
+        top: 0;
+        left: 42;
+        width: 129px;
+        height: 129px;
+        background-image: url('../img/contact/qrcode.jpg');
+        background-size: contain;
+        opacity: 0;
+        -webkit-transition: opacity .25s ease-in-out;
+        transition: opacity .25s ease-in-out;
+      }
+      .btn-qrcode{
+        position: relative;
+        margin: 15px auto 0 auto;
+        width: 80px;
+        height: 24px;
+        background: rgba(238, 237, 237, 0.3) url('../img/contact/qrcode.png') no-repeat center;
+        background-size: 16px 16px;
+        border-radius: 40px;
+        -webkit-transition: background-color .25s ease-in-out;
+        transition: background-color .25s ease-in-out;
+      }
+      .icon{
+        background-image: url('../img/contact/wechat.png');
+      }
+    }
+    .btn-wechat.on{
+      .qrcode{
+        display: block;
+        opacity: 1;
+      }
+    }
+    .title{
+      position: relative;
+      margin-top: 22px;
+      font-size: 14px;
+      color: $white;
+      line-height: 24px;
+      letter-spacing: 1px;
+    }
+    .sub-title{
+      font-family: "montserrat", sans-serif;
+      position: relative;
+      font-size: 12px;
+      font-weight: lighter;
+      line-height: 16px;
+      color: $gray_99;
+    }
+    .btn-email{
+      .icon{
+        background-image: url("../img/contact/email.png");
+      }
+    }
+    .btn-rss{
+      .icon{
+        background-image: url("../img/contact/rss.png");
+      }
+    }
+  }
+}

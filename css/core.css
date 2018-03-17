@@ -1,0 +1,31 @@
+.active{
+    font-weight: 800!important;
+}
+
+.v-center{
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.v-center *:first-child {
+    margin-top: 0;
+}
+
+.v-center *:last-child {
+    margin-bottom: 0;
+}
+
+.fadein{
+    opacity: .3;
+    transition: opacity 1s .4s;
+    -webkit-transition: opacity 1s .4s;
+}
+
+.fadein.in-view{
+    opacity: 1;
+}
