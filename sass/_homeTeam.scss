@@ -1,0 +1,57 @@
+.home-team{
+  position: relative;
+  margin-top: 50px;
+  .wrap{
+    height: 580px;
+    .team-content{
+      background-image: url("../img/home/team.jpg");
+      height: 580px;
+      .team-content-text{
+        position: relative;
+        top: 170px;
+        bottom: 0;
+        color: $white;
+        h3{
+          font-family: 'playfair', sans-serif;
+          font-size: 80px;
+          &:after{
+            content: url("../fonts/yellow-rect.svg");
+            width: 14px;
+            height: 14px;
+            margin-left: 15px;
+          }
+        }
+        p{
+          font-family: 'sourceHanSansCN', sans-serif;
+          font-size: 16px;
+          line-height: 32px;
+          opacity: .8;
+        }
+      }
+      .bar3{
+        position: relative;
+        background-color: $white;
+        top: 180px;
+        left: 460px;
+        width: 300px;
+        height: 50px;
+        box-shadow: 8px 8px 0 $yellow;
+        p {
+          margin-left: 33px;
+          color: $black;
+          font-family: 'pingFang', sans-serif;
+          font-size: 14px;
+          font-weight: bolder;
+          letter-spacing: 1px;
+          &:after {
+            position: absolute;
+            content: url("../fonts/arrow-02.svg");
+            width: 25px;
+            height: 15px;
+            margin-left: 78px;
+          }
+        }
+      }
+    }
+  }
+}

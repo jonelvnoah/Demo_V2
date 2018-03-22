@@ -1,29 +1,33 @@
 // Style for Navigation bar
 
-#mainNav{
+#mainNav {
   padding: 0;
+  transition: height .2s;
   border-bottom: 1px solid fade_out($yellow, 1);
   background-color: $white;
   font-family: "montserrat", sans-serif;
+  font-weight: 600;
   .navbar-brand {
-      >img{
-        width: 42px;
-        height: 42px;
-      }
+    padding: 0;
+    margin: 0;
+    background-image: url("../img/logo_text.svg");
+    background-size: 70px 60px;
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 60px;
   }
 
-  .navbar-nav{
-    > li.nav-item{
-      >a.nav-link{
+  .navbar-nav {
+    > li.nav-item {
+      > a.nav-link {
         padding-left: 15px;
         padding-right: 15px;
         position: relative;
-        font-size: 10px;
-        font-weight: 600;
+        font-size: 14px;
         color: $grizzlyBlue;
         text-transform: uppercase;
         opacity: 1;
-        &:before{
+        &:before {
           content: "";
           position: absolute;
           left: 0;
@@ -34,25 +38,47 @@
           transform: scale(0);
           transition: all .3s;
         }
-        &:hover{
-          &:before{
+        &:hover {
+          &:before {
             transform: scale(1);
           }
         }
       }
     }
-    li#contact-us{
-      border: 1pt solid $grizzlyBlue;
-      > a{
+    li#contact-us {
+      border: 1.13pt solid $grizzlyBlue;
+      margin-left: 15px;
+      > a {
         display: block;
-        padding: 0.5rem 1rem;
+        padding: 10px 30px;
         position: relative;
-        font-size: 10px;
-        font-weight: 600;
+        font-size: 14px;
+        font-weight: bold;
         color: $grizzlyBlue;
         text-transform: uppercase;
-        &:hover,&:focus{
+        &:hover, &:focus {
           text-decoration: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    height: 146px;
+    background-color: transparent;
+    &.fixed {
+      height: 60px;
+      background-color: $black;
+      .navbar-brand {
+        background-image: url("../img/logo_text_white.svg");
+        background-size: 60px 50px;
+        background-position: center;
+      }
+      .navbar-nav {
+        > li.nav-item {
+          > a.nav-link {
+            color: $white
+          }
         }
       }
     }

@@ -1,69 +1,13 @@
 $(document).ready(function () {
-    // Parallax background script, use the ".parallax" class.
-    let parallaxSpeed = 0.15;
 
-    function parallax(){
-        // Parallax scrolling function
-        $('.parallax').each(function(){
-            let el = $(this);
-            let yOffset = $(window).scrollTop(),
-                parallaxOffset = yOffset * parallaxSpeed,
-                parallaxOffset = +parallaxOffset.toFixed(2);
-            if(el.hasClass('fs')){
-                el.css('transform','translate3d(-50%,-'+(50-parallaxOffset*0.15)+'%,0)');
-            } else {
-                el.css('transform','translate3d(0,'+parallaxOffset+'px,0)');
-            }
-        });
-    }
-
-    // Initialize functions on scroll
-    $(window).on('scroll', function(){
-        window.requestAnimationFrame(parallax); // Parallax
-    });
-
-    let $animation_elements = $('.item, .fadein'); // The fly-in element, used for elements that fly-in the window after they're visible on screen
-
-    function inView() { // Function when element is in view
-        let window_height =   $(window).height();
-        let window_top_position =   $(window).scrollTop();
-        let window_bottom_position = (window_top_position + window_height);
-
-        $.each($animation_elements, function() {
-            let $element = $(this);
-            let element_height = $element.outerHeight();
-            let element_top_position = $element.offset().top-100;
-            let element_bottom_position = (element_top_position + element_height);
-
-            //check to see if this current container is within viewport
-            if ((element_bottom_position >= window_top_position) &&
-                (element_top_position <= window_bottom_position)) {
-                $element.addClass('in-view');
-            } else {
-                $element.removeClass('in-view');
-            }
-        });
-    }
-
-    $(window).on('scroll resize', function(){
-        window.requestAnimationFrame(inView);
-        $('.anchor').each(function(){
-            let id = '#'+$('.in-view').attr('id');
-            if(id == $(this).attr('href')){
-                $('.anchor').removeClass('active');
-                $(this).addClass('active');
-            }
-        });
-    });
-
-    $(window).on('load', function(){
-        window.requestAnimationFrame(inView);
-    });
-
-    $(window).on('pageshow', function(event) {
-        if (event.originalEvent.persisted) {
-            window.location.reload()
-        }
+    // Grid functions
+    let $grid = $('.grid').imagesLoaded( function () {
+        $grid.masonry({
+            itemSelector: '.grid-item',
+            percentPosition: true,
+            horizontalOrder: true,
+            columnWidth: '.grid-sizer'
+        })
     });
 
     // Contact Us function
@@ -73,8 +17,7 @@ $(document).ready(function () {
             $(".btn-close").trigger("click");
         }else{
             $(".contact-content").animate({height: "+=370"},300);
-            $(".navbar").animate({top: "+=370"},300);
-            $(".hero").animate({marginTop: "+= 370"},300);
+            $(".navbar").animate({top: "+=326"},300);
             $(this).addClass("on");
             btnContactUs = true;
         }
@@ -84,7 +27,55 @@ $(document).ready(function () {
     $(".btn-close").click(function () {
         $(".btn-contact").removeClass("on");
         $(".contact-content").animate({height:"-=370"},300);
-        $(".navbar").animate({top: "-=370"},300);
+        $(".navbar").animate({top: "-=326"},300);
         btnContactUs = false;
+    });
+
+    $(window).on('scroll',function () {
+        let scrollPos = $("#mainNav").offset().top;
+        if(scrollPos > 100){
+            $(".navbar").addClass("fixed");
+        }else{
+            $(".navbar").removeClass("fixed");
+        }
+    })
+
+    // Scroll reveal calls
+    window.sr = ScrollReveal();
+    sr.reveal('.sr-service',{
+        duration: 600,
+        scale: 0.2,
+        distance: '0px'
+    },600);
+    sr.reveal('.sr-hero',{
+        duration:600,
+        scale: 1,
+        distance: '80px',
+        reset: true
+    });
+    sr.reveal('.sr-heroImg',{
+        duration:600,
+        delay: 300,
+        scale: 0.6,
+        distance: '0px',
+        reset: true
+    });
+    sr.reveal('.sr-case',{
+        duration: 600,
+        scale: 0.2,
+        distance: '0px'
+    });
+    sr.reveal('.sr-team',{
+        duration: 600,
+        scale: 0.2,
+        distance: '0px'
+    },600);
+
+    sr.reveal('.sr-op',{
+        duration: 1000,
+        scale:1,
+        opacity: 0.3,
+        distance: '0px',
+        reset: true
     });
 });

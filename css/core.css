@@ -1,5 +1,6 @@
 .active{
-    font-weight: 800!important;
+    font-family: 'montserratbold',sans-serif;
+    font-weight: bold;
 }
 
 .v-center{
@@ -20,12 +21,8 @@
     margin-bottom: 0;
 }
 
-.fadein{
-    opacity: .3;
-    transition: opacity 1s .4s;
-    -webkit-transition: opacity 1s .4s;
-}
-
-.fadein.in-view{
-    opacity: 1;
+.grid:after{
+    content: '';
+    display: block;
+    clear: both;
 }

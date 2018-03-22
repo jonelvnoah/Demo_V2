@@ -53,3 +53,25 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'montserratbold';
+  src: url('../fonts/montserratBold/montserrat-bold-webfont.eot');
+  src: url('../fonts/montserratBold/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/montserratBold/montserrat-bold-webfont.woff') format('woff'),
+  url('../fonts/montserratBold/montserrat-bold-webfont.ttf') format('truetype'),
+  url('../fonts/montserratBold/montserrat-bold-webfont.svg#montserratbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserratmedium';
+  src: url('../fonts/montserratM/montserrat-medium-webfont.eot');
+  src: url('../fonts/montserratM/montserrat-medium-webfont.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/montserratM/montserrat-medium-webfont.woff') format('woff'),
+  url('../fonts/montserratM/montserrat-medium-webfont.ttf') format('truetype'),
+  url('../fonts/montserratM/montserrat-medium-webfont.svg#montserratmedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

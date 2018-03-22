@@ -1,0 +1,95 @@
+.home-case{
+  .wrap {
+    height: auto;
+    .container {
+      position: relative;
+      .grid-sizer {
+        width: 50%;
+      }
+      .grid-item {
+        width: 50%;
+        float: left;
+        img {
+          display: block;
+          width: 100%;
+        }
+        .thumb {
+          &:before {
+            content: url("../fonts/arrow-02.svg");
+            display: block;
+            position: absolute;
+            top: 40px;
+            left: -32px;
+            opacity: 0;
+            z-index: 9999;
+            @include transition-all;
+          }
+        }
+        .caption {
+          position: absolute;
+          bottom: 0;
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          opacity: 0;
+          color: $black;
+          background: fade_out($yellow, .1);
+          @include transition-all;
+          .caption-content {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            padding-left: 32px;
+            padding-bottom: 38px;
+            text-align: left;
+            .project-brand {
+              font-family: "montserrat", sans-serif;
+              font-size: 13px;
+              margin-bottom: 20px;
+            }
+            .project-name {
+              font-family: 'pingFang', sans-serif;
+              font-size: 21px;
+              font-weight: bold;
+            }
+          }
+        }
+        &:hover {
+          .caption {
+            opacity: 1;
+          }
+
+          .thumb {
+            &:before {
+              left: 32px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .bar2 {
+        position: relative;
+        background-color: $black;
+        margin-top: 20px;
+        width: 300px;
+        height: 50px;
+        box-shadow: 8px 8px 0 $yellow;
+        p {
+          margin-left: 33px;
+          color: $white;
+          font-family: 'pingFang', sans-serif;
+          font-size: 14px;
+          letter-spacing: 1px;
+          &:after {
+            position: absolute;
+            content: url("../fonts/arrow-01.svg");
+            width: 25px;
+            height: 15px;
+            margin-left: 78px;
+          }
+        }
+      }
+    }
+  }
+}
