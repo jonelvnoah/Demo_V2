@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    window.onload = function () {
+        $('.loading').hide();
+    };
+
     // Grid functions
     let $grid = $('.grid').imagesLoaded( function () {
         $grid.masonry({

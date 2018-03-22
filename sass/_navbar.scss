@@ -7,6 +7,7 @@
   background-color: $white;
   font-family: "montserrat", sans-serif;
   font-weight: 600;
+  z-index: 10;
   .navbar-brand {
     padding: 0;
     margin: 0;
@@ -78,6 +79,12 @@
         > li.nav-item {
           > a.nav-link {
             color: $white
+          }
+        }
+        li#contact-us{
+          border: 1.13pt solid $white;
+          > a{
+            color: $white;
           }
         }
       }
