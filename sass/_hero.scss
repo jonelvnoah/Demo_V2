@@ -57,4 +57,15 @@
       }
     }
   }
+  @media (max-width: 992px){
+    .wrap{
+      height: 600px;
+    .title-text {
+      top:160px!important;
+      h2 {
+        font-size: 80px !important;
+      }
+    }
+    }
+  }
 }

@@ -4,6 +4,7 @@
   -moz-transition: all 0.2s;
   transition: all 0.2s;
 }
+
 @mixin background-cover() {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -18,7 +19,6 @@
   }
   &:after {
     clear: both;
-    overflow: hidden;
   }
 }
 

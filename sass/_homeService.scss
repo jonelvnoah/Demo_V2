@@ -50,6 +50,40 @@
       }
     }
   }
+
+  @media (max-width: 1200px){
+    .service-text{
+      h3{
+        font-size: 70px!important;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .wrap {
+      height: 400px!important;
+      .service-text {
+        top: 80px !important;
+        h3 {
+          font-size: 50px !important;
+        }
+        p {
+          font-size: 10px !important;
+        }
+      }
+      .bar1 {
+        top: 260px !important;
+        width: 220px !important;
+        height: 40px !important;
+        p {
+          font-size: 10px !important;
+          &:after{
+            margin-left: 38px!important;
+          }
+        }
+      }
+    }
+  }
 }
 
 

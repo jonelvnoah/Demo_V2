@@ -54,4 +54,33 @@
       }
     }
   }
+  @media (max-width: 1200px){
+    .team-content-text{
+      h3{
+        font-size: 70px!important;
+      }
+    }
+    .bar3{
+      left: 320px!important;
+    }
+  }
+
+  @media (max-width: 992px){
+    .team-content-text{
+      h3{
+        font-size: 50px!important;
+      }
+    }
+    .bar3{
+      width: 220px!important;
+      height: 40px!important;
+      left: 240px!important;
+      p {
+        font-size: 10px !important;
+        &:after{
+          margin-left: 38px!important;
+        }
+      }
+    }
+  }
 }
