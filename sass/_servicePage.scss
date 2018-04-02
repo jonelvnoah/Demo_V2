@@ -1,0 +1,23 @@
+#servicePage{
+  margin: 192px 0 76px 0;
+  a{
+    text-decoration: none;
+    .caption{
+      margin: 32px 0 74px 0;
+      .caption-content{
+        text-align: center;
+        .project-brand{
+          font-family: 'playfair', Serif;
+          color: $black;
+          font-size: 21px;
+          margin-bottom: 19px;
+        }
+        .project-name{
+          font-family: 'sourceHanSansCN', sans-serif;
+          color: $gray_62;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
