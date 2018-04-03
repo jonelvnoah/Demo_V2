@@ -1,4 +1,4 @@
-.nav-mobile{
+.nav-mobile {
   position: absolute;
   height: 0;
   overflow: hidden;
@@ -12,11 +12,12 @@
     background-color: $white;
     transition: opacity .6s;
     .title-bar {
+      top: 0;
       position: relative;
       height: 60px;
       .btn-close-mobile {
         position: absolute;
-        top: 24px;
+        top: 20px;
         left: 20px;
         height: 17px;
         width: 17px;
@@ -25,8 +26,8 @@
           position: absolute;
           left: 11px;
           content: "";
-          height: 24px;
-          width: 3px;
+          height: 22px;
+          width: 2px;
           background-color: $black;
         }
         &:before {
@@ -39,6 +40,7 @@
         }
       }
       .brand-mobile {
+        height: 60px;
         text-align: center;
         img {
           width: 80px;
@@ -61,9 +63,9 @@
         }
       }
     }
-    .nav-contact-mobile{
+    .nav-contact-mobile {
       margin-top: 70px;
-      p{
+      p {
         width: 260px;
         font-family: "montserrat", sans-serif;
         font-size: 22px;
@@ -76,20 +78,51 @@
       }
     }
   }
+  @media (max-width: 762px) {
+    .title-bar {
+      .btn-close-mobile {
+        top: 10px;
+      }
+      .brand-mobile {
+        margin-top: 10px;
+        img {
+          width: 60px !important;
+          height: 40px !important;
+        }
+      }
+    }
+    .nav-content{
+      ul {
+        margin-top: 40px;
+        li {
+          font-size: 14px;
+          padding: 21px 0;
+        }
+      }
+    }
+    .nav-contact-mobile{
+      margin-top: 60px;
+      p {
+        width: 186px;
+        font-size: 14px;
+        padding: 16px 0;
+      }
+    }
   }
+}
 
-#navbar-mobile{
+#navbar-mobile {
   display: none;
-  @media (max-width: 992px){
+  @media (max-width: 992px) {
     position: fixed;
     display: block;
     height: 60px;
     width: 100%;
     background: transparent;
     z-index: 999;
-    >.btn-bar {
+    > .btn-bar {
       position: absolute;
-      top: 24px;
+      top: 20px;
       left: 20px;
       height: 22px;
       width: 22px;
@@ -100,37 +133,34 @@
         transform-origin: 50% 50%;
         display: block;
         margin: 4px 0;
-        height: 3px;
-        background: $black;
-        &:nth-child(3) {
-          margin-top: -6px;
-        }
+        height: 2px;
+        background: $grizzlyBlue;
       }
     }
-    >.btn-bar.on{
-      span{
-        &:nth-child(1){
+    > .btn-bar.on {
+      span {
+        &:nth-child(1) {
           -webkit-transform: scale(0) translateY(7px);
           -moz-transform: scale(0) translateY(7px);
           -ms-transform: scale(0) translateY(7px);
           -o-transform: scale(0) translateY(7px);
           transform: scale(0) translateY(7px)
         }
-        &:nth-child(2){
+        &:nth-child(2) {
           -webkit-transform: rotate(45deg);
           -moz-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
           -o-transform: rotate(45deg);
           transform: rotate(45deg)
         }
-        &:nth-child(3){
+        &:nth-child(3) {
           -webkit-transform: rotate(-45deg);
           -moz-transform: rotate(-45deg);
           -ms-transform: rotate(-45deg);
           -o-transform: rotate(-45deg);
           transform: rotate(-45deg)
         }
-        &:nth-child(4){
+        &:nth-child(4) {
           -webkit-transform: scale(0) translateY(-7px);
           -moz-transform: scale(0) translateY(-7px);
           -ms-transform: scale(0) translateY(-7px);
@@ -139,16 +169,29 @@
         }
       }
     }
-    .navbar-logo{
+    .navbar-logo {
       text-align: center;
-      img{
+      height: 60px;
+      img {
         width: 80px;
         height: 60px;
       }
     }
-    &.fixed-mobile{
+    &.fixed-mobile {
       background: $white;
       height: 60px;
+    }
+  }
+  @media (max-width: 762px) {
+    .btn-bar {
+      top: 18px;
+    }
+    .navbar-logo {
+      margin-top: 10px;
+      img {
+        width: 60px;
+        height: 40px;
+      }
     }
   }
 }

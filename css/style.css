@@ -148,6 +148,21 @@
     letter-spacing: 1px;
     line-height: 32px;
     color: #434343; }
+  @media (max-width: 762px) {
+    .hero {
+      padding: 30px 30px 0;
+      margin-top: 100px;
+      text-align: center; }
+      .hero h1 {
+        font-size: 56px !important; }
+        .hero h1:after {
+          content: url("../fonts/yellow-rect-10.svg");
+          width: 12px;
+          height: 12px;
+          margin-left: 8px; }
+      .hero p {
+        line-height: 23px;
+        font-size: 14px !important; } }
 
 .container:before, .container-fluid:before, .row:before, .container:after, .container-fluid:after, .row:after {
   content: "";
@@ -669,11 +684,12 @@ footer.bottom {
       background-color: #ffffff;
       transition: opacity .6s; }
       .nav-mobile .title-bar {
+        top: 0;
         position: relative;
         height: 60px; }
         .nav-mobile .title-bar .btn-close-mobile {
           position: absolute;
-          top: 24px;
+          top: 20px;
           left: 20px;
           height: 17px;
           width: 17px;
@@ -682,8 +698,8 @@ footer.bottom {
             position: absolute;
             left: 11px;
             content: "";
-            height: 24px;
-            width: 3px;
+            height: 22px;
+            width: 2px;
             background-color: #000000; }
           .nav-mobile .title-bar .btn-close-mobile:before {
             transform: rotate(45deg);
@@ -692,6 +708,7 @@ footer.bottom {
             transform: rotate(-45deg);
             -webkit-transform: rotate(-45deg); }
         .nav-mobile .title-bar .brand-mobile {
+          height: 60px;
           text-align: center; }
           .nav-mobile .title-bar .brand-mobile img {
             width: 80px;
@@ -719,6 +736,25 @@ footer.bottom {
           border: 2px solid #003544;
           padding: 18px 0;
           margin: auto; } }
+  @media (max-width: 762px) {
+    .nav-mobile .title-bar .btn-close-mobile {
+      top: 10px; }
+    .nav-mobile .title-bar .brand-mobile {
+      margin-top: 10px; }
+      .nav-mobile .title-bar .brand-mobile img {
+        width: 60px !important;
+        height: 40px !important; }
+    .nav-mobile .nav-content ul {
+      margin-top: 40px; }
+      .nav-mobile .nav-content ul li {
+        font-size: 14px;
+        padding: 21px 0; }
+    .nav-mobile .nav-contact-mobile {
+      margin-top: 60px; }
+      .nav-mobile .nav-contact-mobile p {
+        width: 186px;
+        font-size: 14px;
+        padding: 16px 0; } }
 
 #navbar-mobile {
   display: none; }
@@ -732,7 +768,7 @@ footer.bottom {
       z-index: 999; }
       #navbar-mobile > .btn-bar {
         position: absolute;
-        top: 24px;
+        top: 20px;
         left: 20px;
         height: 22px;
         width: 22px;
@@ -745,10 +781,8 @@ footer.bottom {
           transform-origin: 50% 50%;
           display: block;
           margin: 4px 0;
-          height: 3px;
-          background: #000000; }
-          #navbar-mobile > .btn-bar span:nth-child(3) {
-            margin-top: -6px; }
+          height: 2px;
+          background: #003544; }
       #navbar-mobile > .btn-bar.on span:nth-child(1) {
         -webkit-transform: scale(0) translateY(7px);
         -moz-transform: scale(0) translateY(7px);
@@ -774,13 +808,22 @@ footer.bottom {
         -o-transform: scale(0) translateY(-7px);
         transform: scale(0) translateY(-7px); }
       #navbar-mobile .navbar-logo {
-        text-align: center; }
+        text-align: center;
+        height: 60px; }
         #navbar-mobile .navbar-logo img {
           width: 80px;
           height: 60px; }
       #navbar-mobile.fixed-mobile {
         background: #ffffff;
         height: 60px; } }
+  @media (max-width: 762px) {
+    #navbar-mobile .btn-bar {
+      top: 18px; }
+    #navbar-mobile .navbar-logo {
+      margin-top: 10px; }
+      #navbar-mobile .navbar-logo img {
+        width: 60px;
+        height: 40px; } }
 
 * {
   margin: 0;
@@ -828,5 +871,14 @@ html {
           font-family: 'sourceHanSansCN', sans-serif;
           color: #626262;
           font-size: 14px; }
+  @media (max-width: 762px) {
+    #servicePage {
+      margin-top: 92px;
+      padding: 10px 30px; }
+      #servicePage a .caption .caption-content .project-brand {
+        font-size: 17px;
+        margin-bottom: 14px; }
+      #servicePage a .caption .caption-content .project-name {
+        font-size: 12px; } }
 
 /*# sourceMappingURL=style.css.map */

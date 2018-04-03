@@ -20,4 +20,21 @@
       }
     }
   }
+  @media (max-width: 762px){
+    margin-top: 92px;
+    padding: 10px 30px;
+    a{
+      .caption{
+        .caption-content{
+          .project-brand{
+            font-size: 17px;
+            margin-bottom: 14px;
+          }
+          .project-name{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
 }
