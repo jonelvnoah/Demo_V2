@@ -24,12 +24,13 @@
     color: $gray_43;
   }
 
-  @media (max-width: 762px) {
+  @media (max-width: 768px) {
     padding: 30px 30px 0;
     margin-top: 100px;
     text-align: center;
     h1 {
       font-size: 56px !important;
+      margin-bottom: 30px!important;
       &:after {
         content: url("../fonts/yellow-rect-10.svg");
         width: 12px;
@@ -38,8 +39,12 @@
       }
     }
     p {
+      padding: 0 30px;
       line-height: 23px;
       font-size: 14px !important;
+      br{
+        display: none;
+      }
     }
   }
 }

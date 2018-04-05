@@ -17,10 +17,22 @@
     width: 50%;
   }
 
-  @media (max-width: 762px){
+  .grid-item--height2{
+    height: 500px;
+  }
+
+  @media (max-width: 768px){
+    .grid-sizer,
+    .grid-item{
+      width: 50%;
+    }
+  }
+
+  @media (max-width: 480px) {
     .grid-sizer,
     .grid-item{
       width: 100%;
     }
+    
   }
 }

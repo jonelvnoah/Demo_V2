@@ -148,21 +148,25 @@
     letter-spacing: 1px;
     line-height: 32px;
     color: #434343; }
-  @media (max-width: 762px) {
+  @media (max-width: 768px) {
     .hero {
       padding: 30px 30px 0;
       margin-top: 100px;
       text-align: center; }
       .hero h1 {
-        font-size: 56px !important; }
+        font-size: 56px !important;
+        margin-bottom: 30px !important; }
         .hero h1:after {
           content: url("../fonts/yellow-rect-10.svg");
           width: 12px;
           height: 12px;
           margin-left: 8px; }
       .hero p {
+        padding: 0 30px;
         line-height: 23px;
-        font-size: 14px !important; } }
+        font-size: 14px !important; }
+        .hero p br {
+          display: none; } }
 
 .container:before, .container-fluid:before, .row:before, .container:after, .container-fluid:after, .row:after {
   content: "";
@@ -201,9 +205,9 @@ footer {
     footer p {
       font-size: 12px !important;
       margin-bottom: 30px; } }
-  @media (max-width: 762px) {
+  @media (max-width: 768px) {
     footer {
-      padding: 20px 0 50px 0; } }
+      padding: 35px 0 35px 0; } }
 
 footer.bottom {
   background-color: #f5f5f5; }
@@ -212,7 +216,7 @@ footer.bottom {
     opacity: .4;
     text-transform: uppercase;
     font-size: 12px; }
-  @media (max-width: 762px) {
+  @media (max-width: 768px) {
     footer.bottom .col-md-12 {
       font-size: 8px; } }
 
@@ -385,18 +389,20 @@ footer.bottom {
       width: 300px;
       height: 50px;
       box-shadow: 8px 8px 0 #f6da6a; }
-      .home-service .wrap .container .bar1 p {
-        margin-left: 33px;
-        color: #ffffff;
-        font-family: 'pingFang', sans-serif;
-        font-size: 14px;
-        letter-spacing: 1px; }
-        .home-service .wrap .container .bar1 p:after {
-          position: absolute;
-          content: url("../fonts/arrow-01.svg");
-          width: 25px;
-          height: 15px;
-          margin-left: 78px; }
+      .home-service .wrap .container .bar1 a {
+        text-decoration: none; }
+        .home-service .wrap .container .bar1 a p {
+          margin-left: 33px;
+          color: #ffffff;
+          font-family: 'pingFang', sans-serif;
+          font-size: 14px;
+          letter-spacing: 1px; }
+          .home-service .wrap .container .bar1 a p:after {
+            position: absolute;
+            content: url("../fonts/arrow-01.svg");
+            width: 25px;
+            height: 15px;
+            margin-left: 78px; }
 @media (max-width: 1200px) {
   .home-service .service-text h3 {
     font-size: 70px !important; } }
@@ -725,13 +731,15 @@ footer.bottom {
         margin-top: 80px;
         padding: 0; }
         .nav-mobile .nav-content ul li {
+          padding: 30px 0;
+          list-style: none;
           font-family: 'montserrat', sans-serif;
           font-size: 22px;
           text-transform: uppercase;
-          font-weight: bolder;
-          color: #003544;
-          list-style: none;
-          padding: 30px 0; }
+          font-weight: bolder; }
+          .nav-mobile .nav-content ul li a {
+            text-decoration: none;
+            color: #003544; }
       .nav-mobile .nav-contact-mobile {
         margin-top: 70px; }
         .nav-mobile .nav-contact-mobile p {
@@ -744,7 +752,7 @@ footer.bottom {
           border: 2px solid #003544;
           padding: 18px 0;
           margin: auto; } }
-  @media (max-width: 762px) {
+  @media (max-width: 768px) {
     .nav-mobile .title-bar .btn-close-mobile {
       top: 10px; }
     .nav-mobile .title-bar .brand-mobile {
@@ -755,8 +763,8 @@ footer.bottom {
     .nav-mobile .nav-content ul {
       margin-top: 40px; }
       .nav-mobile .nav-content ul li {
-        font-size: 14px;
-        padding: 21px 0; }
+        padding: 21px 0;
+        font-size: 14px; }
     .nav-mobile .nav-contact-mobile {
       margin-top: 60px; }
       .nav-mobile .nav-contact-mobile p {
@@ -824,7 +832,7 @@ footer.bottom {
       #navbar-mobile.fixed-mobile {
         background: #ffffff;
         height: 60px; } }
-  @media (max-width: 762px) {
+  @media (max-width: 768px) {
     #navbar-mobile .btn-bar {
       top: 18px; }
     #navbar-mobile .navbar-logo {
@@ -853,25 +861,118 @@ html {
   float: left; }
 .grid .grid-item--width2 {
   width: 50%; }
-@media (max-width: 762px) {
+.grid .grid-item--height2 {
+  height: 500px; }
+@media (max-width: 768px) {
+  .grid .grid-sizer,
+  .grid .grid-item {
+    width: 50%; } }
+@media (max-width: 480px) {
   .grid .grid-sizer,
   .grid .grid-item {
     width: 100%; } }
 
-.content .case-box .thumb img {
-  display: block;
-  width: 100%; }
+#casePage {
+  margin-top: 176px; }
+  #casePage .grid a {
+    text-decoration: none; }
+    #casePage .grid a .thumb img {
+      display: block;
+      width: 100%; }
+    #casePage .grid a .caption {
+      padding: 26px 68px 52px 0;
+      font-family: 'pingFang', sans-serif;
+      color: #000000; }
+      #casePage .grid a .caption .project-date {
+        opacity: .8;
+        font-size: 13px;
+        margin-bottom: 20px; }
+      #casePage .grid a .caption .project-name {
+        font-size: 21px; }
+  #casePage .pagination {
+    margin: 82px 0 140px 0;
+    font-family: 'pingFang', sans-serif;
+    background-color: #f5f5f5;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    display: inline-block;
+    padding-left: 0; }
+    #casePage .pagination .disabled {
+      opacity: .2; }
+    #casePage .pagination .previous {
+      font-size: 36px;
+      padding: 3px 15px 0;
+      margin: 0;
+      height: 49px;
+      line-height: 1;
+      display: block;
+      float: left;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s; }
+      #casePage .pagination .previous:before {
+        content: url("../fonts/arrow-02-left.svg"); }
+      #casePage .pagination .previous:hover {
+        background: #f6da6a; }
+    #casePage .pagination .next {
+      font-size: 36px;
+      padding: 3px 15px 0;
+      margin: 0;
+      height: 49px;
+      line-height: 1;
+      display: block;
+      float: right;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s; }
+      #casePage .pagination .next:before {
+        content: url("../fonts/arrow-02.svg"); }
+      #casePage .pagination .next:hover {
+        background: #f6da6a; }
+    #casePage .pagination .btn {
+      border-radius: 0;
+      border: 0; }
+    #casePage .pagination .btn-default {
+      background: #000000;
+      color: #ffffff;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 16px 25px 15px;
+      font-size: 13px;
+      -webkit-transition: all 0.2s;
+      -moz-transition: all 0.2s;
+      transition: all 0.2s; }
+      #casePage .pagination .btn-default:hover {
+        background: #f6da6a;
+        color: #000000; }
+    #casePage .pagination .active {
+      background: #f6da6a !important;
+      color: #000000 !important; }
+  @media (max-width: 768px) {
+    #casePage {
+      padding: 0 30px; }
+      #casePage .grid a .caption {
+        padding: 16px 0 60px 0; }
+        #casePage .grid a .caption .project-date {
+          font-size: 12px;
+          margin-bottom: 12px; }
+        #casePage .grid a .caption .project-name {
+          font-size: 16px; } }
 
 #servicePage {
   margin: 192px 0 76px 0; }
   #servicePage a {
     text-decoration: none; }
+    #servicePage a .thumb img {
+      display: block;
+      width: 100%; }
     #servicePage a .caption {
       margin: 32px 0 74px 0; }
       #servicePage a .caption .caption-content {
         text-align: center; }
         #servicePage a .caption .caption-content .project-brand {
-          font-family: 'playfair', Serif;
+          font-family: 'playfair', sans-serif;
           color: #000000;
           font-size: 21px;
           margin-bottom: 19px; }
@@ -879,9 +980,9 @@ html {
           font-family: 'sourceHanSansCN', sans-serif;
           color: #626262;
           font-size: 14px; }
-  @media (max-width: 762px) {
+  @media (max-width: 768px) {
     #servicePage {
-      margin-top: 92px;
+      margin-top: 78px;
       padding: 10px 30px; }
       #servicePage a .caption {
         margin: 30px 0 60px 0; }
@@ -890,5 +991,45 @@ html {
           margin-bottom: 14px; }
         #servicePage a .caption .caption-content .project-name {
           font-size: 14px; } }
+
+#teamPage {
+  margin-top: 196px;
+  position: relative; }
+  #teamPage .teamCategory {
+    margin-bottom: 122px; }
+    #teamPage .teamCategory .teamTitle {
+      font-family: 'playfair', sans-serif;
+      padding-bottom: 36px;
+      font-size: 30px; }
+    #teamPage .teamCategory .grid a {
+      font-family: 'sourceHanSansCN', sans-serif; }
+      #teamPage .teamCategory .grid a .thumb img {
+        display: block;
+        width: 100%; }
+      #teamPage .teamCategory .grid a .caption {
+        position: absolute;
+        margin: 0 15px 16px 15px;
+        padding: 14px 0 12px 0;
+        bottom: 0;
+        width: 90%;
+        height: 58px;
+        text-align: center;
+        background-color: #ffffff; }
+        #teamPage .teamCategory .grid a .caption .name {
+          font-size: 14px;
+          color: #000000;
+          margin-bottom: 4px; }
+        #teamPage .teamCategory .grid a .caption .title {
+          text-transform: uppercase;
+          font-size: 11px;
+          color: #626262;
+          letter-spacing: 1px; }
+  @media (max-width: 768px) {
+    #teamPage {
+      margin-top: 74px;
+      padding: 0 30px; }
+      #teamPage .teamCategory .teamTitle {
+        text-align: center;
+        font-size: 21px; } }
 
 /*# sourceMappingURL=style.css.map */

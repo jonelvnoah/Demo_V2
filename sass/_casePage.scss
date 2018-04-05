@@ -1,12 +1,112 @@
-.content{
-  .case-box{
-    .thumb{
-      img{
-        display: block;
-        width: 100%;
+#casePage {
+  margin-top: 176px;
+  .grid {
+    a {
+      text-decoration: none;
+      .thumb {
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      .caption {
+        padding: 26px 68px 52px 0;
+        font-family: 'pingFang', sans-serif;
+        color: $black;
+        .project-date {
+          opacity: .8;
+          font-size: 13px;
+          margin-bottom: 20px;
+        }
+        .project-name {
+          font-size: 21px;
+        }
       }
     }
-    .caption{
+  }
+  .pagination {
+    margin: 82px 0 140px 0;
+    font-family: 'pingFang', sans-serif;
+    background-color: $gray_f5;
+    width: 100%;
+    text-align: center;
+    border-radius: 0;
+    display: inline-block;
+    padding-left: 0;
+    .disabled{
+      opacity: .2;
+    }
+    .previous {
+      font-size: 36px;
+      padding: 3px 15px 0;
+      margin: 0;
+      height: 49px;
+      line-height: 1;
+      display: block;
+      float: left;
+      @include transition-all;
+      &:before {
+        content: url("../fonts/arrow-02-left.svg");
+      }
+      &:hover{
+        background: $yellow;
+      }
+    }
+    .next {
+      font-size: 36px;
+      padding: 3px 15px 0;
+      margin: 0;
+      height: 49px;
+      line-height: 1;
+      display: block;
+      float: right;
+      @include transition-all;
+      &:before {
+        content: url("../fonts/arrow-02.svg");
+      }
+      &:hover{
+        background: $yellow;
+      }
+
+    }
+    .btn {
+      border-radius: 0;
+      border: 0;
+    }
+    .btn-default {
+      background: $black;
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 400;
+      padding: 16px 25px 15px;
+      font-size: 13px;
+      @include transition-all;
+      &:hover {
+        background: $yellow;
+        color: $black;
+      }
+    }
+    .active {
+      background: $yellow !important;
+      color: $black !important;
     }
   }
+  @media (max-width: 768px){
+    padding: 0 30px;
+    .grid{
+      a{
+        .caption{
+          padding: 16px 0 60px 0;
+          .project-date{
+            font-size: 12px;
+            margin-bottom: 12px;
+          }
+          .project-name{
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
 }

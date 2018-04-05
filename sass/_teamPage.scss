@@ -1,0 +1,54 @@
+#teamPage{
+  margin-top: 196px;
+  position: relative;
+  .teamCategory{
+    margin-bottom: 122px;
+    .teamTitle{
+      font-family: 'playfair', sans-serif;
+      padding-bottom: 36px;
+      font-size: 30px;
+    }
+    .grid{
+      a {
+        font-family: 'sourceHanSansCN', sans-serif;
+        .thumb{
+          img{
+            display: block;
+            width: 100%;
+          }
+        }
+        .caption {
+          position: absolute;
+          margin: 0 15px 16px 15px;
+          padding: 14px 0 12px 0;
+          bottom: 0;
+          width: 90%;
+          height: 58px;
+          text-align: center;
+          background-color: $white;
+          .name{
+            font-size: 14px;
+            color: $black;
+            margin-bottom: 4px;
+          }
+          .title{
+            text-transform: uppercase;
+            font-size: 11px;
+            color: $gray_62;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 768px){
+    margin-top: 74px;
+    padding: 0 30px;
+    .teamCategory{
+      .teamTitle{
+        text-align: center;
+        font-size: 21px;
+      }
+    }
+  }
+}

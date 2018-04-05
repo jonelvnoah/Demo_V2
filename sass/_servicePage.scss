@@ -2,12 +2,18 @@
   margin: 192px 0 76px 0;
   a{
     text-decoration: none;
+    .thumb{
+      img{
+        display: block;
+        width: 100%;
+      }
+    }
     .caption{
       margin: 32px 0 74px 0;
       .caption-content{
         text-align: center;
         .project-brand{
-          font-family: 'playfair', Serif;
+          font-family: 'playfair', sans-serif;
           color: $black;
           font-size: 21px;
           margin-bottom: 19px;
@@ -20,8 +26,8 @@
       }
     }
   }
-  @media (max-width: 762px){
-    margin-top: 92px;
+  @media (max-width: 768px){
+    margin-top: 78px;
     padding: 10px 30px;
     a{
       .caption{
