@@ -1,8 +1,8 @@
 $(document).ready(function () {
-
     window.onload = function () {
         $('.loading').hide();
     };
+
 
     // Grid functions
     let $grid = $('.grid').imagesLoaded(function () {
@@ -14,6 +14,47 @@ $(document).ready(function () {
         })
     });
 
+    $('.filter-trigger').on('click',function (e) {
+        e.preventDefault();
+        $('body').addClass('filters-active');
+        $('html,body').animate({
+            scrollTop: $('.grid').offset().top+'px'
+        },500);
+        $('.filter-container').fadeIn();
+    });
+
+    $('.filter-container').on('click', function(e){
+        e.preventDefault();
+        $('body').removeClass('filters-active');
+        $('.filter-container').fadeOut();
+    });
+
+    $('.filter').on('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        let selected = $(this).attr('data-filter');
+        $('.filter.active').removeClass('active');
+        $(this).addClass('active');
+        $('.grid').find('.case-box:not(.'+selected+')').css({
+            '-webkit-transition' : 'all .25s',
+            'transition' : 'all .25s',
+            '-webkit-transform' : 'scale(0)',
+            'transform' : 'scale(0)',
+            '-webkit-opacity' : '0',
+            'opacity' : '0',
+        });
+        setTimeout(function(){
+            $('.grid').find('.case-box:not(.'+selected+')').hide(0);
+            $('.grid').find('.'+selected).show(0).css({
+                '-webkit-transform' : 'scale(1)',
+                '-webkit-opacity' : '1',
+                'transform' : 'scale(1)',
+                'opacity' : '1'
+            });
+            $grid.masonry('layout');
+        }, 250);
+    });
+
     // Contact Us function
     let btnContactUs = false;
     $(".btn-contact").on("click", function () {
@@ -21,7 +62,8 @@ $(document).ready(function () {
             $(".btn-close").trigger("click");
         } else {
             $(".contact-content").animate({height: "+=370"}, 300);
-            $(".navbar").animate({top: "+=326"}, 300);
+            $(".navbar").animate({top: "+=370"}, 300);
+            $('.container-fluid').animate({marginTop: "+=370"},300);
             $(this).addClass("on");
             btnContactUs = true;
         }
@@ -31,7 +73,10 @@ $(document).ready(function () {
     $(".btn-close").click(function () {
         $(".btn-contact").removeClass("on");
         $(".contact-content").animate({height: "-=370"}, 300);
-        $(".navbar").animate({top: "-=326"}, 300);
+        $(".navbar").animate({top: "-=370"}, 300,function () {
+            $("navbar").css({top: ""});
+        });
+        $('.container-fluid').animate({marginTop: "-=370"},300);
         btnContactUs = false;
     });
 

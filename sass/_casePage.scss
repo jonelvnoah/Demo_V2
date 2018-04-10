@@ -1,12 +1,43 @@
 #casePage {
   margin-top: 176px;
-  .grid {
-    a {
+  .filter-box {
+    display: block;
+    width: 100%;
+    .filter-trigger {
       text-decoration: none;
+      display: inline-block;
+      padding: 17px 28px;
+      font-size: 14px;
+      background: $black;
+      color: $white;
+      border: 0;
+      border-radius: 0;
+      text-transform: uppercase;
+      font-weight: 400;
+      @include transition-all;
+      &:hover{
+        background: $yellow;
+      }
+    }
+  }
+  .grid {
+    .grid-item {
+      text-decoration: none;
+      &:hover{
+        .thumb{
+          img{
+            opacity: .5;
+          }
+        }
+      }
       .thumb {
+        position: relative;
+        background: $yellow;
+        overflow: hidden;
         img {
           display: block;
           width: 100%;
+          @include transition-all;
         }
       }
       .caption {
@@ -19,7 +50,8 @@
           margin-bottom: 20px;
         }
         .project-name {
-          font-size: 21px;
+          font-size: 18px;
+          line-height: 24px;
         }
       }
     }
@@ -33,7 +65,7 @@
     border-radius: 0;
     display: inline-block;
     padding-left: 0;
-    .disabled{
+    .disabled {
       opacity: .2;
     }
     .previous {
@@ -48,7 +80,7 @@
       &:before {
         content: url("../fonts/arrow-02-left.svg");
       }
-      &:hover{
+      &:hover {
         background: $yellow;
       }
     }
@@ -64,7 +96,7 @@
       &:before {
         content: url("../fonts/arrow-02.svg");
       }
-      &:hover{
+      &:hover {
         background: $yellow;
       }
 
@@ -91,22 +123,21 @@
       color: $black !important;
     }
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     padding: 0 30px;
-    .grid{
-      a{
-        .caption{
+    .grid {
+      a {
+        .caption {
           padding: 16px 0 60px 0;
-          .project-date{
+          .project-date {
             font-size: 12px;
             margin-bottom: 12px;
           }
-          .project-name{
+          .project-name {
             font-size: 16px;
           }
         }
       }
     }
   }
-
 }

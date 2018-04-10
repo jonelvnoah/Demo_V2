@@ -1,0 +1,63 @@
+.filter-container{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1000;
+  display: none;
+  cursor: url("../img/cursor.png"),auto;
+  .inner{
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 300px;
+    ul.filters{
+      list-style: none;
+      padding: 0;
+      margin-top: 100px;
+      display: table-cell;
+      vertical-align: middle;
+      li{
+        display: block;
+        margin: 0;
+        a.filter{
+          opacity: .4;
+          display: block;
+          color: #555;
+          font-size: 36px;
+          font-weight: 300;
+          text-decoration: none;
+          @include transition-all;
+          &:hover{
+            color: $yellow;
+            opacity: 1;
+          }
+        }
+        a.active{
+          color: $yellow;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+body.filters-active{
+  .grid{
+    transform: scale(0.5) translateY(-40%);
+    -webkit-transform: scale(.5) translateY(-40%);
+  }
+  header,
+  section,
+  footer,
+  nav,
+  .filter-trigger{
+    opacity: 0;
+    @include transition-all;
+  }
+  section#casePage,
+  .filter-container{
+    opacity: 1;
+  }
+}
