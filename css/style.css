@@ -466,7 +466,9 @@ footer.bottom {
     .home-service .wrap .container .bar1 {
       position: relative;
       width: 100%;
-      box-shadow: 4px 4px 0 #f6da6a; } }
+      box-shadow: 4px 4px 0 #f6da6a; }
+      .home-service .wrap .container .bar1 a p {
+        font-size: 14px; } }
 
 .home-case .wrap {
   height: auto; }
@@ -681,7 +683,6 @@ footer.bottom {
         color: #000000;
         font-family: 'pingFang', sans-serif;
         font-size: 14px;
-        font-weight: bolder;
         letter-spacing: 1px; }
         .home-team .container .team-content .bar3 p:after {
           position: absolute;
@@ -713,7 +714,7 @@ footer.bottom {
       margin-top: 0;
       margin-bottom: 115px; }
       .home-team .container .team-content .team-content-img img {
-        width: auto;
+        width: 100%;
         height: 312px; }
       .home-team .container .team-content .team-content-text {
         padding: 0 30px;

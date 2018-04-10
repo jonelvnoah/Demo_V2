@@ -187,6 +187,9 @@
           width: 100%;
           box-shadow: 4px 4px 0 $yellow;
           a {
+            p{
+              font-size: 14px;
+            }
           }
         }
       }
@@ -507,7 +510,6 @@
           color: $black;
           font-family: 'pingFang', sans-serif;
           font-size: 14px;
-          font-weight: bolder;
           letter-spacing: 1px;
           &:after {
             position: absolute;
@@ -567,7 +569,7 @@
       .team-content {
         .team-content-img {
           img {
-            width: auto;
+            width: 100%;
             height: 312px;
           }
         }
