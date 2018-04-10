@@ -1,0 +1,25 @@
+#clientPage{
+  margin: 132px 0 76px 0;
+  a.client-img {
+    text-decoration: none;
+    &:hover{
+      img{
+        filter:grayscale(0);
+        -webkit-filter: grayscale(0);
+      }
+    }
+    img {
+      width: 70%;
+      display: block;
+      margin-left: 45px;
+      -webkit-filter: grayscale(1);
+      filter: grayscale(1);
+      @include transition-all;
+    }
+  }
+
+  @media (max-width: 768px){
+    padding: 10px 30px;
+    margin-top: 80px;
+  }
+}
