@@ -15,7 +15,7 @@
       text-transform: uppercase;
       font-weight: 400;
       @include transition-all;
-      &:hover{
+      &:hover {
         background: $yellow;
       }
     }
@@ -23,9 +23,9 @@
   .grid {
     .grid-item {
       text-decoration: none;
-      &:hover{
-        .thumb{
-          img{
+      &:hover {
+        .thumb {
+          img {
             opacity: .5;
           }
         }
@@ -52,6 +52,7 @@
         .project-name {
           font-size: 18px;
           line-height: 24px;
+          font-weight: bold;
         }
       }
     }
@@ -126,15 +127,16 @@
   @media (max-width: 768px) {
     padding: 0 30px;
     .grid {
-      a {
+      .grid-item {
         .caption {
           padding: 16px 0 60px 0;
           .project-date {
             font-size: 12px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
           }
           .project-name {
             font-size: 16px;
+
           }
         }
       }
